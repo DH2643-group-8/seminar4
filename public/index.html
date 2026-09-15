@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WebSocket Demo</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
+
+      #status {
+        color: gray;
+      }
+
+      #messages {
+        border: 1px solid #ccc;
+        height: 300px;
+        overflow-y: auto;
+        padding: 10px;
+        margin: 20px 0;
+      }
+
+      form {
+        display: flex;
+        gap: 10px;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>WebSocket Chat Demo</h1>
+
+    <p id="status">Connecting...</p>
+    <p>Online users: <strong id="user-count">0</strong></p>
+
+    <div id="messages"></div>
+
+    <form id="message-form">
+      <input
+        id="message-input"
+        placeholder="Write a message..."
+        autocomplete="off" />
+
+      <button type="submit">Send</button>
+    </form>
+
+    <script src="client.js"></script>
+  </body>
+</html>
